@@ -1,0 +1,70 @@
+defineps myPSgrid()
+
+	1 setgray
+	0.001 setlinewidth
+
+	-3 -1 moveto
+	 3 -1 lineto
+	stroke
+	-1 -3 moveto
+	-1  3 lineto
+	stroke
+	-3  1 moveto
+	 3  1 lineto
+	stroke
+	 1 -3 moveto
+	 1  3 lineto
+	stroke
+	
+endps
+
+
+
+defineps PSanimline(float x1,y1,x2,y2)
+
+	newpath
+	
+	/xd	x2 x1 sub def
+	/yd	y2 y1 sub def
+	
+	x1 y1 moveto
+	
+	0 0.1 0.9 {
+		dup dup
+		0.1 add
+		dup  
+		xd mul x1 add 
+		exch yd mul y1 add 
+		/xa exch def
+		/ya exch def
+		xd mul x1 add 
+		exch yd mul y1 add 
+		/xb exch def
+		/yb exch def
+
+		xa ya moveto xb yb lineto
+		xa -1 mul ya moveto xb -1 mul yb lineto
+		xa  ya -1 mul moveto xb yb -1 mul lineto
+		xa -1 mul ya -1 mul moveto xb -1 mul yb -1 mul lineto
+
+		ya xa moveto yb xb lineto
+		ya -1 mul xa moveto yb -1 mul xb lineto
+		ya  xa -1 mul moveto yb xb -1 mul lineto
+		ya -1 mul xa -1 mul moveto yb -1 mul xb -1 mul lineto
+
+		stroke
+		flushgraphics 
+		} for 
+			
+endps
+
+
+
+defineps PSanimcircle(float x,y,r)
+
+	newpath x y r 0 360 arc stroke
+	newpath x -1 mul y r 0 360 arc stroke
+	newpath x y -1 mul r 0 360 arc stroke
+	newpath x -1 mul y -1 mul r 0 360 arc stroke
+	
+endps 

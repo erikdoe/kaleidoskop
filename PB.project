@@ -1,0 +1,29 @@
+INSTALLDIR = "$(HOME)/Apps";
+APPICON = "";
+GENERATEMAIN = YES;
+DOCICONFILES = ();
+FILESTABLE = {
+    M_FILES = (Kaleidoskop_main.m);
+    OTHER_LINKED = ();
+    H_FILES = (ArabesqueView.h, Controller.h);
+    CLASSES = (ArabesqueView.m, Controller.m);
+    IMAGES = ();
+    PSW_FILES = (pswraps.psw);
+    C_FILES = ();
+    OTHER_SOURCES = ();
+    SUBPROJECTS = ();
+    PSWM_FILES = ();
+    SOUNDS = ();
+    OTHER_LIBS = (Media_s, NeXT_s);
+    INTERFACES = (Kaleidoskop.nib);
+};
+APPCLASS = Application;
+MAINNIB = Kaleidoskop;
+DOCEXTENSIONS = ();
+PROJECTTYPE = Application;
+LOCALIZABLE_FILES = {
+};
+PROJECTVERSION = 1.1;
+PROJECTNAME = Kaleidoskop;
+SYSTEMEXTENSIONS = ();
+LANGUAGE = English;
