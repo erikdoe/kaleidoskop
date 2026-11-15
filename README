@@ -1,0 +1,5 @@
+# Kaleidoskop
+
+Screensaver for NeXTstep, originally written in 1992 as a black and white version, extended in 1993 for colour.
+
+The main drawing code is handwritten Display Postscript in `pswraps.psw`. The `.h` and `.c` fles were created from it. They are only checked in to (maybe) aid porting.
